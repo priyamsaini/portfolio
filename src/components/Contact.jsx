@@ -3,22 +3,8 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import emailjs from 'emailjs/browser';
-import React, { useRef } from 'react';
 
 export function Contact() {
-    const form = useRef();
-
-    const sendEmail = (e) => {
-        e.preventDefault();
-
-        emailjs.sendForm('service_s9v80g8', 'template_koyag9n', form.current, 're8K6-ZSx3j1ITRFx')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
-    };
     return (
         <div className="container" id='contact'>
             <h1 className="sub-title">Contact</h1>
@@ -34,7 +20,7 @@ export function Contact() {
                     <a href="#"><WhatsAppIcon /></a>
                 </div>
                 <div className="ct-right">
-                    <form ref={form} onSubmit={sendEmail}>
+                    <form>
                         <input type="text" name="name" placeholder="Your Name" required />
                         <input type="email" name="email" placeholder="Your E-mail" required />
                         <textarea rows={6} cols={50} name="message" placeholder="Write your message..." />
