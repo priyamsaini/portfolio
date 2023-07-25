@@ -1,21 +1,22 @@
-import { About } from './components/About';
-import Services from './components/Services';
-import Home from './components/Home';
+import Home from './pages/Home';
 import { Work } from './components/Work';
-import { Contact } from './components/Contact';
-import { Footer } from './components/Footer';
+import { Contact } from './pages/Contact';
+import NoPage from '../src/pages/NoPage';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
 function App() {
   return (
-    <div>
-      <Home />
-      <About />
-      <Services />
-      <Work />
-      <Contact />
-      <Footer />
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/home' element={<Home/>} />
+          <Route path='/work' element={<Work/>} />
+          <Route path='/contact' element={<Contact/>} />
+          <Route path='/*' element={<NoPage/>}/>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

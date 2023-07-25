@@ -1,6 +1,12 @@
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import Navbar from './Navbar';
+import { Footer } from './Footer';
+
+
 export function Work() {
     return (
+        <>
+        <Navbar/>
         <div className="container" id="work">
             <h1 className="sub-title">Work</h1>
             <div className="work-list">
@@ -30,5 +36,7 @@ export function Work() {
                 </div>
             </div>
         </div>
+        <Footer/>
+        </>
     );
 }

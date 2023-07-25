@@ -1,67 +1,64 @@
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
-*{
+* {
     padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: "Titillium Web", sans-serif;
+    margin: 0;
 }
 
 html {
     scroll-behavior: smooth;
+    font-size: 1rem;
+    font-family: sans-serif;
 }
 
 body {
-    background-color: black;
-    color: white;
-}
-
-:root {
-	--mainColor: #2654e9;
-	--mainColorLight: #566293;
-	--secondaryColor: #c02525;
-	--textColor: #eee;
+    background-color: #000;
+    color: #fff;
 }
 
 header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	height: 80px;
-	padding: 0 2rem;
-	background-color: var(--mainColor);
-	color: var(--textColor);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background: #373737;
+    padding: 0 2rem;
+}
+.logo{
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
 }
 
-nav a {
-	margin: 0 1rem;
-	color: var(--textColor);
-	text-decoration: none;
+.navbar {
+    margin: 0 1rem;
+    color: #fff;
+    font-family: sans-serif;
+    text-decoration: none;
 }
 
-nav a:hover {
-	color: var(--secondaryColor);
+header .navbar:hover {
+    color: yellow;
 }
 
 header .nav-btn {
-	padding: 5px;
-	cursor: pointer;
-	background: transparent;
-	border: none;
-	outline: none;
-	color: var(--textColor);
-	visibility: hidden;
-	opacity: 0;
-	font-size: 1.8rem;
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.8rem;
 }
 
 header,
 nav {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
 }
 
-.container{
-    margin: 0 100px;
+.container {
+    margin-inline: 100px;
+    margin-top: 20px;
 }
 
 #home {
@@ -72,30 +69,15 @@ nav {
     background-position: center;
 }
 
-.abt-prym {
-    margin-left: 7%;
-    width: 25%;
-    padding-top: 3px;
-    font-size: 32px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    -webkit-user-select: none;
-    /* Safari */
-    -ms-user-select: none;
-    /* IE 10 and IE 11 */
-    user-select: none;
-}
-
-.abt-prym::first-letter {
-    color: yellow;
-}
-
 .header-text {
+    font-family: sans-serif;
     margin: 20% 20%;
-    font-size: 30px;
+    font-size: 2rem;
 }
 
 .header-text h1 {
-    font-size: 60px;
+    font-family: sans-serif;
+    font-size: 4rem;
     margin-top: 20px;
 }
 
@@ -127,10 +109,13 @@ nav {
 
 .abtpara {
     text-align: justify;
+    line-height: 1.8;
+    font-family: sans-serif;
+    padding-block: 10px;
 }
 
 .sub-title {
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 600;
 }
 
@@ -141,7 +126,7 @@ nav {
 
 .tab-links {
     margin-right: 50px;
-    font-size: 18px;
+    font-size: 1.2rem;
     font-weight: 500;
     cursor: pointer;
     position: relative;
@@ -165,10 +150,11 @@ nav {
 .tab-contents ul li {
     list-style: none;
     margin: 10px 0;
+    padding-block: 10px;
 }
 
 .tab-contents ul li span {
-    font-size: 14px;
+    font-size: 1rem;
 }
 
 .tab-contents {
@@ -194,20 +180,22 @@ nav {
 
 .services-list div {
     padding: 30px;
-    background: #4d0f0f;
-    font-size: 18px;
+    background: #373737;
+    font-size: 1.5rem;
     border-radius: 12px;
     transition: background 0.5s, transform 0.3s;
 }
 
 .services-list div h1 {
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 1.4rem;
 }
 
 .services-list div p {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 1.5;
 }
 
 .layer p {
@@ -221,7 +209,7 @@ nav {
 }
 
 .services-list div:hover {
-    background: #7d3a3a;
+    background: #6b6b6b;
     transform: translateY(-10px);
 }
 
@@ -254,18 +242,29 @@ nav {
     height: 0;
     width: 100%;
     justify-content: center;
-    font-size: 18px;
+    font-size: 1.1rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     left: 0;
     bottom: 0;
     align-items: center;
-    padding: 0 40px;
     border-radius: 10px;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #7d3a3a);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #6b6b6b);
     position: absolute;
     transition: height 0.5s;
+}
+
+.layer h3 {
+    font-size: 1.6rem;
+    font-family: sans-serif;
+}
+
+.layer p {
+    font-size: 1rem;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.4;
 }
 
 .work:hover .layer {
@@ -273,15 +272,19 @@ nav {
 }
 
 /* -----------Contact----------- */
+.map {
+    margin-block: 20px;
+}
 
 .ct-left {
+    color: #fff;
     flex-basis: 35%;
     width: 100%;
 }
 
 .ct-left h3 {
     padding: 20px 0;
-    font-size: 20px;
+    font-size: 1.8rem;
 }
 
 .ct-left p {
@@ -298,20 +301,18 @@ nav {
 }
 
 .ct-left a:hover {
-    color: #7d3a3a;
-    transition: 0.5s;
+    color: #373737;
+    transition: 0.2s;
 }
 
 .download {
-    border: 1px solid #7d3a3a;
+    border: 1px solid #373737;
     width: 180px;
     text-align: center;
-    border-radius: 20px;
 }
 
 .download:hover {
-    color: white;
-    background: white;
+    background: #6b6b6b;
 }
 
 .ct-right {
@@ -325,7 +326,7 @@ textarea {
     padding: 10px 5px;
     margin: 10px 0;
     border-radius: 5px;
-    background: #7d3a3a;
+    background: #373737;
     color: #fff;
     border: none;
     resize: none;
@@ -338,13 +339,13 @@ textarea {
     margin: auto 20%;
     opacity: 1;
     color: #fff;
-    border: solid #7d3a3a;
-    background: black;
+    border: 1px solid #373737;
+    background: transparent;
     transition: backgound 0.5s;
 }
 
 .ct-right form button:hover {
-    background: #4d0f0f;
+    background: #6b6b6b;
 }
 
 /* ----------Footer---------- */
@@ -355,85 +356,98 @@ textarea {
     bottom: 0;
     font-size: 14px;
     text-align: center;
-    margin-top: 10px;
-    padding: 5px 0;
+    margin-top: 20px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    background: gray;
+    background: #6b6b6b;
+}
+
+.footer p {
+    padding-top: 15px;
 }
 
 /* --------mobile responsive ---------- */
 
 @media only screen and (max-width: 1024px) {
-	header .nav-btn {
-		visibility: visible;
-		opacity: 1;
-	}
-    .container{
+    header .nav-btn {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .container {
         margin: 10px;
     }
-    .header-text h1{
-        font-size: 30px;
-        font-weight: 300;
-    }
-    .header-text p{
-        font-size: 20px;
+
+    .header-text h1 {
+        margin-top: 90%;
+        font-size: 2.6rem;
+        font-family: sans-serif;
+        font-weight: 600;
     }
 
-	header nav {
+    .header-text p {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    header nav {
         z-index: 1;
-		position: fixed;
-		top: -100vh;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 1.5rem;
-		background-color: var(--mainColor);
-		transition: 1s;
-	}
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: #373737;
+        transition: 1s;
+    }
 
-	header .responsive_nav {
-		transform: translateY(100vh);
-	}
+    header .responsive_nav {
+        transform: translateY(100vh);
+    }
 
-	nav .nav-close-btn {
-		position: absolute;
-		top: 2rem;
-		right: 2rem;
-	}
+    nav .nav-close-btn {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
 
-	nav a {
-		font-size: 1.5rem;
-	}
-    #home{
+    nav a {
+        font-size: 1.5rem;
+    }
+
+    #home {
         background: url(./images/phone-background.png);
         width: 100%;
-        height: 80vh;
+        height: 100vh;
         background-position: center;
         background-size: cover;
     }
 
-    .sub-title{
-        font-size: 20px;
-        font-weight: 300;
+    .sub-title {
+        font-size: 1.6rem;
+        font-weight: 600;
     }
-    .abt-2{
+
+    .abt-2 {
         flex-basis: 100%;
         overflow: hidden;
     }
-    .abt-1{
+
+    .abt-1 {
         flex-basis: 100%;
     }
-    .abtpara{
+
+    .abtpara {
         text-overflow: inherit;
     }
-    .ct-left, .ct-right{
+
+    .ct-left,
+    .ct-right {
         flex-basis: 100%;
     }
 }
-    
-    
