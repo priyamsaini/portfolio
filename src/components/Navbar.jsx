@@ -15,7 +15,7 @@ function Navbar() {
 		<header>
 			<img className="logo" src="../images/logo.png" />
 			<nav ref={navRef}>
-				<NavLink className="navbar" to="/home">Home</NavLink>
+				<NavLink className="navbar" to="/">Home</NavLink>
 				<NavLink className="navbar" to="/work">Work</NavLink>
 				<NavLink className="navbar" to="/contact">Contact</NavLink>
 				<button
