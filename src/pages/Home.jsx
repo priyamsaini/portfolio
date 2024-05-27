@@ -6,7 +6,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 export default function Home() {
   return (
     <div>
-      <section className="flex md:flex-row flex-col-reverse md:justify-evenly md:items-center gap-2 bg-primary p-4 w-full h-screen">
+      <section className="flex md:flex-row flex-col-reverse md:justify-evenly items-center gap-2 bg-primary p-4 w-full h-screen">
         <div className="flex flex-col md:items-start gap-4 p-2">
           <p className="font-light text-base text-center text-quaternary/80 md:text-lg tracking-wider">
             HI, THERE
@@ -26,7 +26,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className="bg-gradient-to-tr from-tertiary/50 to-tertiary rounded-full md:w-[400px] md:h-[400px] overflow-hidden">
+        <div className="bg-gradient-to-tr from-tertiary/50 to-tertiary rounded-full w-[300px] md:w-[400px] h-[300px] md:h-[400px] overflow-hidden [200px]">
           <img
             className="w-full h-full object-cover"
             src={profilePicture}

@@ -56,6 +56,7 @@ export default function Navbar(props) {
                   );
                 }}
                 to={navItem.href}
+                onClick={handleMenuClick}
               >
                 {navItem.name}
               </NavLink>
